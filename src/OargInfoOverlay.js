@@ -65,7 +65,7 @@ export class OargInfoOverlay extends DileOverlayMixin(DileCloseDocumentClick(Lit
         ${icon}
       </span>
       <div id="overlay" class="${this._overlayClass}">
-        <slot name="info"></slot>
+        <slot></slot>
       </div>
     `;
   }
