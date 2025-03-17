@@ -67,7 +67,7 @@ export class OargInfoOverlay extends DileOverlayMixin(DileCloseDocumentClick(Lit
       <span @click=${this.toggle} id="trigger">
         ${icon}
       </span>
-      <div id="overlay" class="${this._overlayClass}">
+      <div id="overlay" @click=${this.stopClickPropagation} class="${this._overlayClass}">
         <slot></slot>
       </div>
     `;
@@ -77,5 +77,9 @@ export class OargInfoOverlay extends DileOverlayMixin(DileCloseDocumentClick(Lit
     if (changedProperties.has('opened')) {
       this.opened ? this.open() : this.close();
     }
+  }
+
+  stopClickPropagation(e) {
+    e.stopPropagation();
   }
 }

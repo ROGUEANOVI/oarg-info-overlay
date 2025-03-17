@@ -3,7 +3,7 @@
   "description": "Webcomponent oarg-info-overlay following open-wc recommendations",
   "license": "MIT",
   "author": "Ovidio Romero",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
