@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <style>
+    body {
+      background: #fafafa;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100vh;
+    }
+    oarg-info-overlay {
+      --oarg-info-overlay-background-color: lightskyblue;
+      --oarg-info-overlay-text-color: gray;
+      --oarg-info-overlay-font-style: italic;
+      --oarg-info-overlay-icon-color: black;
+      --oarg-info-overlay-icon-size: 32px;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+  <div id="demo2"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../oarg-info-overlay.js';
+
+    const header = 'Hello owc World!';
+    render(
+      html`
+        <oarg-info-overlay horizontalAlign="left" verticalAlign="top">
+          <span slot="info">Hello owc World!</span>
+        </oarg-info-overlay>
+      `,
+      document.querySelector('#demo')
+    );
+
+    render(
+      html`
+        <oarg-info-overlay opened horizontalAlign="right" verticalAlign="bottom" moveLeft="20">
+          <span slot="info">Hello owc World!</span>
+        </oarg-info-overlay>
+      `,
+      document.querySelector('#demo2')
+    );
+  </script>
+</body>
+</html>
