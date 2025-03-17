@@ -16,14 +16,17 @@ export class OargInfoOverlay extends DileOverlayMixin(DileCloseDocumentClick(Lit
       }
 
       span {
+        display: flex;
+        align-items: center;
         cursor: pointer;
       }
 
       #overlay {
+        box-sizing: border-box;
         display: none;
         position: absolute;
         opacity: 0;
-        width: max-content;
+        width: var(--oarg-info-overlay-width, max-content);
         background-color: var(--oarg-info-overlay-background-color, beige);
         color: var(--oarg-info-overlay-text-color, black);
         padding: 0.5rem;
